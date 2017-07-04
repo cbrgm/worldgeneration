@@ -1,4 +1,4 @@
-package startup;
+package worldgeneration;
 
 /**
  * @author Christian Bargmann <christian.bargmann@haw-hamburg.de>

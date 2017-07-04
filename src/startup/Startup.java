@@ -1,5 +1,9 @@
 package startup;
 
+import java.util.Random;
+
+import worldgeneration.WorldGenerator;
+
 /**
  * @author Christian Bargmann <christian.bargmann@haw-hamburg.de>
  * @version 03.07.2017
@@ -10,12 +14,12 @@ package startup;
 public class Startup {
 
 	public static void main(String[] args) {
-
-		WorldGenerator worldgen = new RandomIslands();
+		Random r = new Random();
+		WorldGenerator worldgen = new DiamondSquareGenerator(1000, 0, 20, 4, r.nextLong());
 		MapImage mi = new MapImage();
 
-		for (int i = 0; i < 5; i++) {
-			int[][] array = worldgen.createWorld(500, 500);
+		for (int i = 0; i < 1; i++) {
+			int[][] array = worldgen.createWorld(100, 100);
 			mi.visualize(array, "generatedMap" + i);
 		}
 

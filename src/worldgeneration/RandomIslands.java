@@ -1,8 +1,10 @@
-package startup;
+package worldgeneration;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import startup.Coordinate;
 
 /**
  * @author Christian Bargmann <christian.bargmann@haw-hamburg.de>
@@ -17,7 +19,7 @@ public class RandomIslands implements WorldGenerator {
 	 * Ueberschreiben der Methode createWorld in der Klasse RandomIslands. Fuer
 	 * Details zur Implementierung siehe:
 	 * 
-	 * @see startup.WorldGenerator#createWorld(int, int)
+	 * @see worldgeneration.WorldGenerator#createWorld(int, int)
 	 */
 	@Override
 	public int[][] createWorld(int width, int height) {
