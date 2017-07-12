@@ -9,6 +9,6 @@ package worldgeneration;
  */
 public interface WorldGenerator {
 
-	public int[][] createWorld(int width, int height);
+	public double[][] createWorld(int width, int height);
 
 }

@@ -24,7 +24,7 @@ public class MapImage {
 	 * 
 	 * @param array
 	 */
-	public void visualize(int[][] array) {
+	public void visualize(double[][] array) {
 		createImage(array, "generatedMap");
 	}
 
@@ -33,7 +33,7 @@ public class MapImage {
 	 * 
 	 * @param array
 	 */
-	public void visualize(int[][] array, int amount) {
+	public void visualize(double[][] array, int amount) {
 		for (int i = 0; i < amount; i++) {
 			createImage(array, "generatedMap" + i);
 		}
@@ -44,7 +44,7 @@ public class MapImage {
 	 * 
 	 * @param array
 	 */
-	public void visualize(int[][] array, String filename) {
+	public void visualize(double[][] array, String filename) {
 		createImage(array, filename);
 	}
 
@@ -54,7 +54,7 @@ public class MapImage {
 	 * @param array
 	 * @param filename
 	 */
-	private void createImage(int[][] array, String filename) {
+	private void createImage(double[][] array, String filename) {
 
 		System.out.println("Creating MapImage, please wait...");
 
@@ -76,53 +76,53 @@ public class MapImage {
 		for (int x = 0; x < array.length; x++) {
 			for (int y = 0; y < array[x].length; y++) {
 
-				if (array[x][y] < 10) { // Deep Ocean
+				if (array[x][y] < -0.5) { // Deep Ocean
 					g2d.setColor(new Color(1, 38, 119));
 					g2d.fillRect(y * PIXEL_SCALE, x * PIXEL_SCALE, PIXEL_SCALE, PIXEL_SCALE);
 
-				} else if (array[x][y] < 13) { // Ocean
+				} else if (array[x][y] < -0.4) { // Ocean
 					g2d.setColor(new Color(0, 91, 197));
 					g2d.fillRect(y * PIXEL_SCALE, x * PIXEL_SCALE, PIXEL_SCALE, PIXEL_SCALE);
 
-				} else if (array[x][y] < 15) { // Sea
+				} else if (array[x][y] < -0.2) { // Sea
 					g2d.setColor(new Color(0, 180, 252));
 					g2d.fillRect(y * PIXEL_SCALE, x * PIXEL_SCALE, PIXEL_SCALE, PIXEL_SCALE);
 
-				} else if (array[x][y] < 17) { // Beach
+				} else if (array[x][y] < 0.0) { // Beach
 					g2d.setColor(new Color(175, 209, 62));
 					g2d.fillRect(y * PIXEL_SCALE, x * PIXEL_SCALE, PIXEL_SCALE, PIXEL_SCALE);
 
-				} else if (array[x][y] < 23) { // Plain
+				} else if (array[x][y] < 0.2) { // Plain
 					g2d.setColor(new Color(113, 174, 78));
 					g2d.fillRect(y * PIXEL_SCALE, x * PIXEL_SCALE, PIXEL_SCALE, PIXEL_SCALE);
 
-				} else if (array[x][y] < 30) { // Forest
+				} else if (array[x][y] < 0.3) { // Forest
 					g2d.setColor(new Color(113, 134, 78));
 					g2d.fillRect(y * PIXEL_SCALE, x * PIXEL_SCALE, PIXEL_SCALE, PIXEL_SCALE);
 
-				} else if (array[x][y] < 39) { // Deep Forest
+				} else if (array[x][y] < 0.4) { // Deep Forest
 					g2d.setColor(new Color(62, 102, 23));
 					g2d.fillRect(y * PIXEL_SCALE, x * PIXEL_SCALE, PIXEL_SCALE, PIXEL_SCALE);
 
-				} else if (array[x][y] < 40) { // Hills
+				} else if (array[x][y] < 0.5) { // Hills
 					g2d.setColor(new Color(166, 140, 105));
 					g2d.fillRect(y * PIXEL_SCALE, x * PIXEL_SCALE, PIXEL_SCALE, PIXEL_SCALE);
 
-				} else if (array[x][y] < 45) { // Cliffs
+				} else if (array[x][y] < 0.6) { // Cliffs
 					g2d.setColor(new Color(168, 149, 143));
 					g2d.fillRect(y * PIXEL_SCALE, x * PIXEL_SCALE, PIXEL_SCALE, PIXEL_SCALE);
 
-				} else if (array[x][y] < 50) { // Mountains
+				} else if (array[x][y] < 0.7) { // Mountains
 					g2d.setColor(new Color(150, 129, 122));
 					g2d.fillRect(y * PIXEL_SCALE, x * PIXEL_SCALE, PIXEL_SCALE, PIXEL_SCALE);
 
-				} else if (array[x][y] < 55) { // High Mountain
+				} else if (array[x][y] < 0.8) { // High Mountain
 					g2d.setColor(new Color(84, 106, 107));
 					g2d.fillRect(y * PIXEL_SCALE, x * PIXEL_SCALE, PIXEL_SCALE, PIXEL_SCALE);
-				} else if (array[x][y] < 70) { // Icy Mountain
+				} else if (array[x][y] < 0.9) { // Icy Mountain
 					g2d.setColor(new Color(44, 97, 89));
 					g2d.fillRect(y * PIXEL_SCALE, x * PIXEL_SCALE, PIXEL_SCALE, PIXEL_SCALE);
-				} else if (array[x][y] >= 70) { // Ice
+				} else if (array[x][y] >= 1) { // Ice
 					g2d.setColor(Color.WHITE);
 					g2d.fillRect(y * PIXEL_SCALE, x * PIXEL_SCALE, PIXEL_SCALE, PIXEL_SCALE);
 				}

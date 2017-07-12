@@ -1,7 +1,6 @@
 package startup;
 
-import java.util.Random;
-
+import worldgeneration.SimplexNoiseGenerator;
 import worldgeneration.WorldGenerator;
 
 /**
@@ -14,12 +13,11 @@ import worldgeneration.WorldGenerator;
 public class Startup {
 
 	public static void main(String[] args) {
-		Random r = new Random();
-		WorldGenerator worldgen = new DiamondSquareGenerator(1000, 0, 20, 4, r.nextLong());
+		WorldGenerator worldgen = new SimplexNoiseGenerator(10, 0.6f, 0.0025f);
 		MapImage mi = new MapImage();
 
-		for (int i = 0; i < 1; i++) {
-			int[][] array = worldgen.createWorld(100, 100);
+		for (int i = 0; i < 10; i++) {
+			double[][] array = worldgen.createWorld(250, 250);
 			mi.visualize(array, "generatedMap" + i);
 		}
 
