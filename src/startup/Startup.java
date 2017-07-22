@@ -13,6 +13,7 @@ import worldgeneration.WorldGenerator;
 public class Startup {
 
 	public static void main(String[] args) {
+		// WorldGenerator worldgen = new SimplexNoiseGenerator(10, 0.2f, 0.0025f);
 		WorldGenerator worldgen = new SimplexNoiseGenerator(10, 0.6f, 0.0025f);
 		MapImage mi = new MapImage();
 
