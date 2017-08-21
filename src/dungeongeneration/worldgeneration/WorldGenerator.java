@@ -1,4 +1,4 @@
-package worldgeneration;
+package dungeongeneration.worldgeneration;
 
 /**
  * @author Christian Bargmann <christian.bargmann@haw-hamburg.de>

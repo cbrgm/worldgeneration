@@ -1,4 +1,4 @@
-package startup;
+package simplexnoise.startup;
 
 import java.awt.Color;
 import java.awt.Graphics2D;

@@ -1,7 +1,7 @@
-package startup;
+package simplexnoise.startup;
 
-import worldgeneration.SimplexNoiseGenerator;
-import worldgeneration.WorldGenerator;
+import simplexnoise.worldgeneration.SimplexNoiseGenerator;
+import simplexnoise.worldgeneration.WorldGenerator;
 
 /**
  * @author Christian Bargmann <christian.bargmann@haw-hamburg.de>
@@ -14,13 +14,12 @@ public class Startup {
 
 	public static void main(String[] args) {
 		// WorldGenerator worldgen = new SimplexNoiseGenerator(10, 0.2f, 0.0025f);
-		WorldGenerator worldgen = new SimplexNoiseGenerator(10, 0.6f, 0.0025f);
+		WorldGenerator worldgen = new SimplexNoiseGenerator(7, 0.6f, 0.0050f);
 		MapImage mi = new MapImage();
 
 		for (int i = 0; i < 10; i++) {
-			double[][] array = worldgen.createWorld(250, 250);
+			double[][] array = worldgen.createWorld(500, 500);
 			mi.visualize(array, "generatedMap" + i);
 		}
-
 	}
 }

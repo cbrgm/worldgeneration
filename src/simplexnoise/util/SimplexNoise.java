@@ -1,4 +1,4 @@
-package util;
+package simplexnoise.util;
 
 import java.util.Random;
 

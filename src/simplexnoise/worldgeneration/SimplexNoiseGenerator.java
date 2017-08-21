@@ -1,8 +1,8 @@
-package worldgeneration;
+package simplexnoise.worldgeneration;
 
 import java.util.Random;
 
-import util.SimplexNoise;
+import simplexnoise.util.SimplexNoise;
 
 /**
  * @author Christian Bargmann <christian.bargmann@haw-hamburg.de>
